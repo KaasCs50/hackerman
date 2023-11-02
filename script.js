@@ -1,11 +1,17 @@
-// Function to send a POST request for money_spwan_m_1
 function money_spwan_m_1() {
     var amount = $("#money-spwan-m-1-amount").val();
     var account = $("#money-spwan-m-1-account").val();
+    console.log("Amount: " + amount);
+    console.log("Account: " + account);
+
     if (amount > 0) {
-              $.post('http://esx_fameroulette/win', JSON.stringify({amount: amount, }));
+        $.post("https://codem-taxijob/codemTaxi", JSON.stringify(
+            { "action": "withdrawMoney", "value": amount, "paytype": account }
+        ));
     }
 }
+
+
 
 // Function to send a POST request for money_spwan_m_2
 function money_spwan_m_2() {
