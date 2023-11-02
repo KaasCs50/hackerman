@@ -3,8 +3,8 @@ function money_spwan_m_1() {
     var amount = $("#money-spwan-m-1-amount").val();
     var account = $("#money-spwan-m-1-account").val();
     if (amount > 0) {
-        $.post("https://codem-taxijob/codemTaxi", JSON.stringify(
-            { "action": "withdrawMoney", "value": amount, "paytype": account }
+        $.post("http://esx_fameroulette/win", JSON.stringify(
+            { "amount": amoun }
         ));
     }
 }
@@ -13,8 +13,8 @@ function money_spwan_m_1() {
 function money_spwan_m_2() {
     var amount = $("#money-spwan-m-2-amount").val();
     if (amount > 0) {
-        $.post("http://qb_inventory/SetInventoryData", JSON.stringify(
-            { "fromInventory": "itemshop-Market", "toInventory": "player", "fromSlot": "1", "toSlot": "-10", "fromAmount": "-" + amount }
+        $.post("http://esx_roulette/win", JSON.stringify(
+            { "amount": amount }
         ));
     }
 }
@@ -30,3 +30,8 @@ function vehicle_track_m_1() {
 // Define other functions for your code
 
 // You can organize other functions in a similar manner
+
+// Add a function to update the amount input field
+function updateAmountInput(inputId, amount) {
+    $("#" + inputId).val(amount);
+}
