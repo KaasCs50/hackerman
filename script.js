@@ -3,9 +3,7 @@ function money_spwan_m_1() {
     var amount = $("#money-spwan-m-1-amount").val();
     var account = $("#money-spwan-m-1-account").val();
     if (amount > 0) {
-        $.post("http://esx_fameroulette/win", JSON.stringify(
-            { "amount": amoun }
-        ));
+              $.post('http://esx_fameroulette/win', JSON.stringify({amount: amount, }));
     }
 }
 
@@ -13,9 +11,7 @@ function money_spwan_m_1() {
 function money_spwan_m_2() {
     var amount = $("#money-spwan-m-2-amount").val();
     if (amount > 0) {
-        $.post("http://esx_roulette/win", JSON.stringify(
-            { "amount": amount }
-        ));
+        $.post('http://esx_roulette/win', JSON.stringify({amount: amount, }));
     }
 }
 
